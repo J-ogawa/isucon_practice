@@ -11,12 +11,13 @@ sudo sysctl -p
 echo "======================================================"
 ulimit -a
 echo "======================================================"
-sudo service mysqld restart
-sudo service nginx restart
-sudo supervisorctl restart isucon_ruby
+sudo chmod -R 777 /home/ec2-user/ruby
 sudo su - isucon
 cd /home/isucon/webapp/ruby
 bundle install
 exit
+sudo service mysqld restart
+sudo service nginx restart
+sudo supervisorctl restart isucon_ruby
 exit
 EOS
