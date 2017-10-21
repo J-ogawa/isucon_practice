@@ -4,7 +4,7 @@ require 'mysql2-cs-bind'
 require 'rack-flash'
 require 'json'
 require 'rack-lineprof'
-require 'newrelic_rpm'
+# require 'newrelic_rpm'
 
 module Isucon4
   class App < Sinatra::Base
@@ -14,7 +14,7 @@ module Isucon4
     set :public_folder, File.expand_path('../../public', __FILE__)
 
     # no js injection in the page
-    newrelic_ignore_enduser
+    # newrelic_ignore_enduser
 
     helpers do
       def config
