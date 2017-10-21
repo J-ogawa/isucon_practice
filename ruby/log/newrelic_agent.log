@@ -1,0 +1,153 @@
+# Logfile created on 2017-10-15 07:48:41 +0000 by logger.rb/44203
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Starting the New Relic agent version 4.5.0.337 in "development" environment.
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Reading configuration from config/newrelic.yml (/home/isucon/isucon/ruby)
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Environment: development
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Dispatcher: unicorn
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Application: My Application (Development)
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Deferring startup of agent reporting thread because unicorn may fork.
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Installing Sinatra instrumentation
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Installing Net instrumentation
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Finished instrumentation
+[2017-10-15 07:48:41 +0000 ip-10-0-0-70 (11696)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Starting the New Relic agent version 4.5.0.337 in "development" environment.
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Reading configuration from config/newrelic.yml (/home/isucon/isucon/ruby)
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Environment: development
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Dispatcher: unicorn
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Application: My Application (Development)
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Deferring startup of agent reporting thread because unicorn may fork.
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Installing Sinatra instrumentation
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Installing Net instrumentation
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Finished instrumentation
+[2017-10-15 07:56:19 +0000 ip-10-0-0-70 (11859)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-10-15 07:56:39 +0000 ip-10-0-0-70 (11890)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 07:57:01 +0000 ip-10-0-0-70 (11878)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 07:57:05 +0000 ip-10-0-0-70 (11875)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 07:59:10 +0000 ip-10-0-0-70 (11890)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 07:59:11 +0000 ip-10-0-0-70 (11866)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 07:59:23 +0000 ip-10-0-0-70 (11863)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:00:29 +0000 ip-10-0-0-70 (11887)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:01:58 +0000 ip-10-0-0-70 (11884)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:02:10 +0000 ip-10-0-0-70 (11881)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:03 +0000 ip-10-0-0-70 (11872)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:03 +0000 ip-10-0-0-70 (11869)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:05 +0000 ip-10-0-0-70 (12118)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:08 +0000 ip-10-0-0-70 (12132)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:09 +0000 ip-10-0-0-70 (12146)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:09 +0000 ip-10-0-0-70 (12154)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:10 +0000 ip-10-0-0-70 (12163)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:11 +0000 ip-10-0-0-70 (12175)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:13 +0000 ip-10-0-0-70 (12192)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:24 +0000 ip-10-0-0-70 (12201)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:37 +0000 ip-10-0-0-70 (12212)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:39 +0000 ip-10-0-0-70 (12221)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:41 +0000 ip-10-0-0-70 (12230)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:43 +0000 ip-10-0-0-70 (12239)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:44 +0000 ip-10-0-0-70 (12246)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:46 +0000 ip-10-0-0-70 (12274)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:46 +0000 ip-10-0-0-70 (12283)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:48 +0000 ip-10-0-0-70 (12293)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:48 +0000 ip-10-0-0-70 (12301)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:50 +0000 ip-10-0-0-70 (12311)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:05:51 +0000 ip-10-0-0-70 (12320)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:01 +0000 ip-10-0-0-70 (12332)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:01 +0000 ip-10-0-0-70 (12335)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:23 +0000 ip-10-0-0-70 (12463)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:23 +0000 ip-10-0-0-70 (12471)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:25 +0000 ip-10-0-0-70 (12484)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:25 +0000 ip-10-0-0-70 (12481)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:27 +0000 ip-10-0-0-70 (12499)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:27 +0000 ip-10-0-0-70 (12502)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:30 +0000 ip-10-0-0-70 (12517)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:32 +0000 ip-10-0-0-70 (12526)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:34 +0000 ip-10-0-0-70 (12535)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:35 +0000 ip-10-0-0-70 (12544)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:11:58 +0000 ip-10-0-0-70 (12561)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:24:32 +0000 ip-10-0-0-70 (12594)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:24:35 +0000 ip-10-0-0-70 (12311)] ERROR : Exception finishing segment: Middleware/Rack/Rack::Protection::FrameOptions/call
+[2017-10-15 08:24:35 +0000 ip-10-0-0-70 (12311)] ERROR : NoMethodError: undefined method `metrics' for 2.000000000069737:Float
+[2017-10-15 08:24:35 +0000 ip-10-0-0-70 (12311)] ERROR : Exception during Transaction.stop
+[2017-10-15 08:24:35 +0000 ip-10-0-0-70 (12311)] ERROR : NoMethodError: undefined method `metrics' for 2.000000000069737:Float
+[2017-10-15 08:24:36 +0000 ip-10-0-0-70 (12571)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:24:38 +0000 ip-10-0-0-70 (12585)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:25:01 +0000 ip-10-0-0-70 (12568)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:04 +0000 ip-10-0-0-70 (12582)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:20 +0000 ip-10-0-0-70 (13012)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:20 +0000 ip-10-0-0-70 (13009)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:23 +0000 ip-10-0-0-70 (13027)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:23 +0000 ip-10-0-0-70 (13035)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:36 +0000 ip-10-0-0-70 (13052)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:36 +0000 ip-10-0-0-70 (13060)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:37 +0000 ip-10-0-0-70 (13069)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:38 +0000 ip-10-0-0-70 (13076)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:38 +0000 ip-10-0-0-70 (13087)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:42 +0000 ip-10-0-0-70 (13076)] ERROR : Exception during Transaction.stop
+[2017-10-15 08:29:42 +0000 ip-10-0-0-70 (13076)] ERROR : NoMethodError: undefined method `record_scoped_and_unscoped' for 69872712996914:Fixnum
+[2017-10-15 08:29:43 +0000 ip-10-0-0-70 (13099)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:43 +0000 ip-10-0-0-70 (13105)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:44 +0000 ip-10-0-0-70 (13117)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:48 +0000 ip-10-0-0-70 (13135)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:29:59 +0000 ip-10-0-0-70 (13144)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:30:17 +0000 ip-10-0-0-70 (13160)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:15 +0000 ip-10-0-0-70 (13157)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:15 +0000 ip-10-0-0-70 (13192)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:16 +0000 ip-10-0-0-70 (13184)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:16 +0000 ip-10-0-0-70 (13169)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:17 +0000 ip-10-0-0-70 (13313)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:18 +0000 ip-10-0-0-70 (13321)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:20 +0000 ip-10-0-0-70 (13331)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:20 +0000 ip-10-0-0-70 (13348)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:21 +0000 ip-10-0-0-70 (13354)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:21 +0000 ip-10-0-0-70 (13362)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:32 +0000 ip-10-0-0-70 (13377)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:33 +0000 ip-10-0-0-70 (13385)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:33 +0000 ip-10-0-0-70 (13392)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:36 +0000 ip-10-0-0-70 (13413)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:37 +0000 ip-10-0-0-70 (13421)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:37 +0000 ip-10-0-0-70 (13424)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:37:51 +0000 ip-10-0-0-70 (13442)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:39:06 +0000 ip-10-0-0-70 (13452)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Starting the New Relic agent version 4.5.0.337 in "development" environment.
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Reading configuration from config/newrelic.yml (/home/isucon/isucon/ruby)
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Environment: development
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Dispatcher: unicorn
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Application: My Application (Development)
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Deferring startup of agent reporting thread because unicorn may fork.
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Installing Sinatra instrumentation
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Installing Net instrumentation
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Finished instrumentation
+[2017-10-15 08:46:16 +0000 ip-10-0-0-70 (13631)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-10-15 08:46:39 +0000 ip-10-0-0-70 (13490)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:46:39 +0000 ip-10-0-0-70 (13474)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:46:39 +0000 ip-10-0-0-70 (13481)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Starting the New Relic agent version 4.5.0.337 in "development" environment.
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Reading configuration from config/newrelic.yml (/home/isucon/isucon/ruby)
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Environment: development
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Dispatcher: unicorn
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Application: My Application (Development)
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Deferring startup of agent reporting thread because unicorn may fork.
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Installing Sinatra instrumentation
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Installing Net instrumentation
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Finished instrumentation
+[2017-10-15 08:55:49 +0000 ip-10-0-0-70 (13991)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-10-15 08:55:53 +0000 ip-10-0-0-70 (14016)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:03 +0000 ip-10-0-0-70 (14013)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:11 +0000 ip-10-0-0-70 (14010)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (14022)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (14007)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (13995)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (14001)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (13998)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (14004)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
+[2017-10-15 08:56:42 +0000 ip-10-0-0-70 (14019)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1770725/applications/84647357
