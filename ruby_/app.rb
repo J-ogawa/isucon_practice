@@ -39,24 +39,53 @@ module Isucon4
         Digest::SHA256.hexdigest "#{password}:#{salt}"
       end
 
+      def count_user_failure(user_id)
+        log = db.xquery('SELECT success_flag,failure_count FROM user_login_failure WHERE user_id = ?', user_id).first
+        return [0, 0] unless log
+        [log['success_flag'], log['failure_count']]
+      end
+
+      def count_ip_failure(ip)
+        log = db.xquery('SELECT success_flag,failure_count FROM ip_login_failure WHERE ip = ?', ip).first
+        return [0, 0] unless log
+        [log['success_flag'], log['failure_count']]
+      end
+
       def login_log(succeeded, login, user_id = nil)
         db.xquery("INSERT INTO login_log" \
                   " (`created_at`, `user_id`, `login`, `ip`, `succeeded`)" \
                   " VALUES (?,?,?,?,?)",
                  Time.now, user_id, login, request.ip, succeeded ? 1 : 0)
+
+        login_log_failure(succeeded, request.ip, user_id)
+      end
+
+      def login_log_failure(succeeded, ip, user_id = nil)
+        if succeeded
+          to_user_success = 1
+          to_ip_success = 1
+          to_user_count = 0
+          to_ip_count = 0
+        else
+          to_user_success, to_user_count = count_user_failure(user_id)
+          to_ip_success, to_ip_count = count_ip_failure(ip)
+          to_user_count += 1
+          to_ip_count += 1
+        end
+
+        if user_id
+          db.xquery("insert into user_login_failure(user_id, success_flag, failure_count) values(?, ?, ?) on duplicate key update success_flag = ?, failure_count = ?", user_id, to_user_success, to_user_count, to_user_success, to_user_count)
+        end
+        db.xquery("insert into ip_login_failure(ip, success_flag, failure_count) values(?, ?, ?) on duplicate key update success_flag = ?, failure_count = ?", ip, to_ip_success, to_ip_count, to_ip_success, to_ip_count)
       end
 
       def user_locked?(user)
         return nil unless user
-        log = db.xquery("SELECT COUNT(1) AS failures FROM login_log WHERE user_id = ? AND id > IFNULL((select id from login_log where user_id = ? AND succeeded = 1 ORDER BY id DESC LIMIT 1), 0);", user['id'], user['id']).first
-
-        config[:user_lock_threshold] <= log['failures']
+        config[:user_lock_threshold] <= count_user_failure(user['id']).last
       end
 
       def ip_banned?
-        log = db.xquery("SELECT COUNT(1) AS failures FROM login_log WHERE ip = ? AND id > IFNULL((select id from login_log where ip = ? AND succeeded = 1 ORDER BY id DESC LIMIT 1), 0);", request.ip, request.ip).first
-
-        config[:ip_ban_threshold] <= log['failures']
+        config[:ip_ban_threshold] <= count_ip_failure(request.ip).last
       end
 
       def attempt_login(login, password)
@@ -107,39 +136,22 @@ module Isucon4
         ips = []
         threshold = config[:ip_ban_threshold]
 
-        not_succeeded = db.xquery('SELECT ip FROM (SELECT ip, MAX(succeeded) as max_succeeded, COUNT(1) as cnt FROM login_log GROUP BY ip) AS t0 WHERE t0.max_succeeded = 0 AND t0.cnt >= ?', threshold)
-
-        ips.concat not_succeeded.each.map { |r| r['ip'] }
-
-        last_succeeds = db.xquery('SELECT ip, MAX(id) AS last_login_id FROM login_log WHERE succeeded = 1 GROUP by ip')
-
-        last_succeeds.each do |row|
-          count = db.xquery('SELECT COUNT(1) AS cnt FROM login_log WHERE ip = ? AND ? < id', row['ip'], row['last_login_id']).first['cnt']
-          if threshold <= count
+        [0, 1].each do |flag|
+          db.xquery('SELECT * FROM ip_login_failure WHERE success_flag = ? AND failure_count >= ?', flag, threshold).each do |row|
             ips << row['ip']
           end
         end
-
         ips
       end
 
       def locked_users
         user_ids = []
         threshold = config[:user_lock_threshold]
-
-        not_succeeded = db.xquery('SELECT user_id, login FROM (SELECT user_id, login, MAX(succeeded) as max_succeeded, COUNT(1) as cnt FROM login_log GROUP BY user_id) AS t0 WHERE t0.user_id IS NOT NULL AND t0.max_succeeded = 0 AND t0.cnt >= ?', threshold)
-
-        user_ids.concat not_succeeded.each.map { |r| r['login'] }
-
-        last_succeeds = db.xquery('SELECT user_id, login, MAX(id) AS last_login_id FROM login_log WHERE user_id IS NOT NULL AND succeeded = 1 GROUP BY user_id')
-
-        last_succeeds.each do |row|
-          count = db.xquery('SELECT COUNT(1) AS cnt FROM login_log WHERE user_id = ? AND ? < id', row['user_id'], row['last_login_id']).first['cnt']
-          if threshold <= count
+        [0, 1].each do |flag|
+          db.xquery('SELECT users.login FROM users INNER JOIN user_login_failure ON users.id = user_login_failure.user_id WHERE success_flag = ? AND user_login_failure.failure_count >= ?', flag, threshold).each do |row|
             user_ids << row['login']
           end
         end
-
         user_ids
       end
     end
@@ -180,6 +192,18 @@ module Isucon4
         banned_ips: banned_ips,
         locked_users: locked_users,
       }.to_json
+    end
+
+    get '/dump' do
+      db.xquery('DELETE FROM user_login_failure')
+      db.xquery('DELETE FROM ip_login_failure')
+
+      db.xquery('SELECT * FROM login_log').each do |log|
+        login_log_failure(log['succeeded'] == 1, log['ip'], log['user_id'])
+      end
+
+      content_type :json
+      { a: 'b' }.to_json
     end
   end
 end

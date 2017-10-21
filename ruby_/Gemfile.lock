@@ -50,6 +50,3 @@ DEPENDENCIES
   rack-lineprof
   sinatra
   unicorn
-
-BUNDLED WITH
-   1.15.4
